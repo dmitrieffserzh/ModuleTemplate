@@ -35,8 +35,6 @@ body {
   line-height: 1.4;
 }
 
-//@import "scss/bootstrap-grid";
-
 /*  HEADER
 ===================================================================================================================== */
 .header {
@@ -47,22 +45,25 @@ body {
   padding: 1rem 0;
   width: 100%;
   background: #fff;
-  @include box-shadow(0 0 1rem 0 rgba(0, 0, 0, 0.2));
- &:before {
-   position: absolute;
-   right: 0;
-   bottom: -1px;
-   left: 0;
-   height: 1px;
-   content: '';
-   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiP…dpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-   background: -moz-linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.25) 50%, rgba(255, 255, 255, 0));
-   background: -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.25) 50%, rgba(255, 255, 255, 0));
-   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.25) 50%, rgba(255, 255, 255, 0));
- }
+  @include box-shadow(0 0 1rem 0 rgba(0, 0, 0, 0.05));
+
+  &:before {
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+    height: 1px;
+    content: '';
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiP…dpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: -moz-linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.25) 50%, rgba(255, 255, 255, 0));
+    background: -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.25) 50%, rgba(255, 255, 255, 0));
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.25) 50%, rgba(255, 255, 255, 0));
+  }
+
   &__logo {
     display: block;
   }
+
   &__slogan {
 
   }
@@ -76,6 +77,7 @@ body {
   margin: 0;
   padding: .5rem;
   width: 3rem;
+
   &__line {
     display: block;
     float: left;
@@ -95,7 +97,7 @@ body {
   padding: .5rem 1rem;
   color: #fff;
   text-transform: uppercase;
-  @include border-radius(.25rem);
+  @include border-radius(.15rem);
   cursor: pointer;
 }
 
@@ -104,6 +106,7 @@ body {
 .main {
   min-height: 3000px;
 }
+
 /*  FOOTER
 ===================================================================================================================== */
 
@@ -113,6 +116,7 @@ body {
   margin: 0 auto;
   padding: 0 $outer-margin;
   max-width: $max-width;
+
   &__row {
     @include box-sizing(border-box);
     @include display-flex();
@@ -159,50 +163,62 @@ body {
   @include flex-grow(1);
   @include flex-basis(0);
   max-width: 100%;
+
   &-1 {
     @include flex-basis(8.33333333%);
     max-width: 8.33333333%;
   }
+
   &-2 {
     @include flex-basis(16.66666667%);
     max-width: 16.66666667%;
   }
+
   &-3 {
     @include flex-basis(25%);
     max-width: 25%;
   }
+
   &-4 {
     @include flex-basis(33.33333333%);
     max-width: 33.33333333%;
   }
+
   &-5 {
     @include flex-basis(41.66666667%);
     max-width: 41.66666667%;
   }
+
   &-6 {
     @include flex-basis(50%);
     max-width: 50%;
   }
+
   &-7 {
     @include flex-basis(58.33333333%);
     max-width: 58.33333333%;
   }
+
   &-8 {
     @include flex-basis(66.66666667%);
     max-width: 66.66666667%;
   }
+
   &-9 {
     @include flex-basis(75%);
     max-width: 75%;
   }
+
   &-10 {
     @include flex-basis(83.33333333%);
     max-width: 83.33333333%;
   }
+
   &-11 {
     @include flex-basis(91.66666667%);
     max-width: 91.66666667%;
   }
+
   &-12 {
     @include flex-basis(100%);
     max-width: 100%;
@@ -211,41 +227,55 @@ body {
   &-offset-0 {
     margin-left: 0;
   }
+
   &-offset-1 {
     margin-left: 8.33333333%;
   }
+
   &-offset-2 {
     margin-left: 16.66666667%;
   }
+
   &-offset-3 {
     margin-left: 25%;
   }
+
   &-offset-4 {
     margin-left: 33.33333333%;
   }
+
   &-offset-5 {
     margin-left: 41.66666667%;
   }
+
   &-offset-6 {
     margin-left: 50%;
   }
+
   &-offset-7 {
     margin-left: 58.33333333%;
   }
+
   &-offset-8 {
     margin-left: 66.66666667%;
   }
+
   &-offset-9 {
     margin-left: 75%;
   }
+
   &-offset-10 {
     margin-left: 83.33333333%;
   }
+
   &-offset-11 {
     margin-left: 91.66666667%;
   }
 }
 
+.no-gutters {
+  margin: 0;
+}
 .start {
   @include justify-content(flex-start);
   text-align: start;
