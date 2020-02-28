@@ -159,7 +159,7 @@ body {
 .container {
   margin: 0 auto;
   padding: 0 0.5rem;
-  max-width: 1300px;
+  max-width: 1200px;
 }
 .container__row {
   -moz-box-sizing: border-box;
