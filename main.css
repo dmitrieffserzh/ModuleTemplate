@@ -68,8 +68,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 h2 {
   color: #000;
   font-size: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
 }
 
 html {
@@ -116,7 +115,7 @@ body {
 }
 .header__slogan {
   flex: 1;
-  border-left: 1px Solid rgba(0, 0, 0, 0.15);
+  border-left: 1px Solid rgba(0, 0, 0, 0.08);
   padding: 0 1rem;
   margin: 0 1rem;
   color: #687080;
@@ -131,7 +130,7 @@ body {
   padding: 0 0 1rem;
   font-size: .9rem;
   color: #647698;
-  border-bottom: 1px Solid rgba(0, 0, 0, 0.15);
+  border-bottom: 1px Solid rgba(0, 0, 0, 0.08);
   line-height: 1.5;
 }
 
@@ -178,6 +177,38 @@ body {
 .section {
   padding: 3rem 0;
   min-height: 600px;
+}
+.section__title {
+  padding: 0 0 1rem;
+  margin: 0 0 1rem;
+  color: #000;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 900;
+  overflow: hidden;
+}
+.section__title span {
+  position: relative;
+}
+.section__title span:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 1200px;
+  right: calc(100% + 20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+.section__title span:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 1200px;
+  left: calc(100% + 20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+.section__title--center {
+  text-align: center;
 }
 
 /*  FOOTER
@@ -6249,4 +6280,19 @@ readers do not read off random characters that represent icons */
 
 .fa, .fas {
   color: #2c6cfd;
+}
+
+.service__item {
+  padding: 1rem;
+  margin: 1rem;
+  min-height: 400px;
+  -moz-border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  border-radius: 1rem;
+  -moz-box-shadow: 0px 20px 2rem 0 rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0px 20px 2rem 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 20px 2rem 0 rgba(0, 0, 0, 0.05);
+}
+.service__item:nth-child(even) {
+  margin: 4rem 1rem 1rem;
 }

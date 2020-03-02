@@ -19,8 +19,8 @@ h1 {
 h2 {
   color: #000;
   font-size: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 5px;
+  //text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 html {
@@ -79,7 +79,7 @@ body {
 
   &__slogan {
     flex: 1;
-    border-left: 1px Solid rgba(0, 0, 0, 0.15);
+    border-left: 1px Solid rgba(0, 0, 0, 0.08);
     padding: 0 1rem;
     margin: 0 1rem;
     color: #687080;
@@ -95,7 +95,7 @@ body {
   padding: 0 0 1rem;
   font-size: .9rem;
   color: #647698;
-  border-bottom: 1px Solid rgba(0, 0, 0, 0.15);
+  border-bottom: 1px Solid rgba(0, 0, 0, 0.08);
   line-height: 1.5;
 }
 
@@ -118,7 +118,6 @@ body {
   }
 }
 
-
 .btn {
   display: inline-block;
   background: #2c6cfd;
@@ -136,12 +135,47 @@ body {
 .main {
   min-height: 3000px;
 }
+
 /*  SECTION
 ===================================================================================================================== */
 .section {
   padding: 3rem 0;
   min-height: 600px;
+
+  &__title {
+    padding: 0 0 1rem;
+    margin: 0 0 1rem;
+    color: #000;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 900;
+    overflow: hidden;
+    & span {
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 1200px;
+        right: calc(100% + 20px);
+        border-bottom: 1px solid rgba(0, 0, 0, .08);
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 1200px;
+        left: calc(100% + 20px);
+        border-bottom: 1px solid rgba(0, 0, 0, .08);
+      }
+    }
+    &--center {
+      text-align: center;
+    }
+  }
 }
+
 /*  FOOTER
 ===================================================================================================================== */
 .footer {
@@ -149,10 +183,47 @@ body {
   background: #f4f4f7;
   min-height: 400px;
 }
+
 @import "scss/grid";
 @import "scss/icons/fontawesome";
 @import "scss/icons/regular";
 @import "scss/icons/solid";
 .fa, .fas {
   color: #2c6cfd;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////
+.service {
+  &__item {
+    padding: 1rem;
+    margin: 1rem;
+    min-height: 400px;
+    @include border-radius(1rem);
+    @include box-shadow(0px 20px 2rem 0 rgba(0, 0, 0, 0.05));
+    &:nth-child(even) {
+      margin: 4rem 1rem 1rem;
+    }
+  }
+
 }
